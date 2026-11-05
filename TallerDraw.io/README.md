@@ -8,9 +8,8 @@ ARCHIVOS DE LA ENTREGA
 - 03_actividades_cu07.svg y 03_actividades_cu03.svg
 - README.md (este archivo)
 
-======================================================================
 BLOQUE 1 - DIAGRAMA DE CONTEXTO
-======================================================================
+
 
 ![Diagrama de contexto](01_contexto_rpg.svg)
 
@@ -41,9 +40,8 @@ BUG A CORREGIR - Diagrama de contexto
 
 CHECKLIST: un solo proceso numerado 0 (cumple), 4 entidades externas (cumple), todas las flechas con nombre de datos (cumple), ninguna flecha entre entidades externas (cumple), sin bases de datos (cumple).
 
-======================================================================
+
 BLOQUE 2 - DIAGRAMA DE CASOS DE USO
-======================================================================
 
 ![Diagrama de casos de uso](02_casos_uso_rpg.svg)
 
@@ -63,9 +61,7 @@ BUG A CORREGIR - Casos de uso
 - Error 3: La flecha «include» va en dirección invertida. Debe salir del caso base (CU-03 Crear Personaje) hacia el incluido (CU-04 Elegir clase).
 - Error 4: Una asociación directa entre los actores Jugador y Game Master no existe en este diagrama. Los actores solo se relacionan con casos de uso, no entre sí.
 
-======================================================================
 BLOQUE 3 - DIAGRAMAS DE ACTIVIDADES
-======================================================================
 
 CU-07 Combatir en la Arena (incluye la decisión de pociones del ejercicio 3A):
 
@@ -91,9 +87,7 @@ BUG A CORREGIR - Diagrama de actividades
 - Error 2: Un fork cuyos dos caminos terminan cada uno en su propio nodo final, sin join. El fork debe cerrarse con un join que espere a que ambos caminos terminen, y recién ahí continuar hacia un único nodo final.
 - Error 3: "Calcular daño al oponente" está en el carril del Jugador. Lo ejecuta el sistema, así que debe estar en el carril RPG Manager. Un carril equivocado hace que el diagrama mienta sobre la responsabilidad.
 
-======================================================================
 BLOQUE 5 - PREGUNTAS DE REFLEXIÓN
-======================================================================
 
 1. ¿Por qué el diagrama de contexto no muestra la base de datos del RPG Manager si el sistema sí la usa?
 Porque en el nivel 0 el sistema es una caja negra: solo interesa qué datos entran y salen con el exterior. La base de datos es parte interna del sistema (un almacén de datos), no una entidad externa, y se muestra desde el DFD de nivel 1 en adelante.
@@ -113,10 +107,3 @@ En la clase Personaje (por ejemplo un método atacar(oponente)), porque el daño
 
 6. ¿Cuándo preferirías PlantUML y cuándo draw.io en un proyecto real?
 PlantUML cuando la documentación técnica cambia seguido y se versiona en Git, porque los cambios se leen línea a línea. draw.io cuando necesito controlar el diseño visual para presentar o explicar, o un diagrama con mucho detalle visual.
-
-======================================================================
-EVIDENCIA
-======================================================================
-
-URL de mi commit: (pegar aquí la URL github.com/.../commit/...)
-# TallerDraw.io
